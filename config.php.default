@@ -10,9 +10,10 @@ class Config {
 
     public static $theme = 'default';
     public static $autocomplete=false;
+    public static $default_language = 'english';
     public static $language = array(
         'english' => 'English',
-        'german' => 'German',
+        'german' => 'Deutsch',
     );
     public static $server=array(
         'name' => "Localhost",

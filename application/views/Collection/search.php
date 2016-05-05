@@ -13,15 +13,15 @@
                 <table id="tbl-search-col-val">
                     <tr>
                         <th>&nbsp;</th>
-                        <th>Field</th>
-                        <th>Operator</th>
-                        <th>Value</th>
+                        <th><?php I18n::p('Field'); ?></th>
+                        <th><?php I18n::p('Operator'); ?></th>
+                        <th><?php I18n::p('Value'); ?></th>
 
                         <th>&nbsp;</th>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
-                        <td><input type="text" class="input-xlarge" name="query[]"  placeholder="Enter Attribute"></td>
+                        <td><input type="text" class="input-xlarge" name="query[]"  placeholder="<?php I18n::p('Enter Attribute'); ?>"></td>
                         <td><select name="query[]" style="width: auto;">
                                 <option value="=">=</option>
                                 <option value="$gt">&gt;</option>
@@ -30,18 +30,18 @@
                                 <option value="$lte=">&lt;=</option>
                                 <option value="$ne">!=</option>
                             </select></td>
-                        <td ><input type="text" class="input-xlarge" name="query[]" placeholder="Enter Value"></td>
+                        <td ><input type="text" class="input-xlarge" name="query[]" placeholder="<?php I18n::p('Enter Value'); ?>"></td>
                         <td>&nbsp;<a href="javascript:void(0)" onclick="PMDS.appendTR();" class="icon-plus" title="Add">&nbsp;</a>&nbsp;</td>
                     </tr>
                 </table>
                 <table id="tbl-order-by">
                     <tr>
-                        <th>Order By</th>
-                        <th>Order</th>
+                        <th><?php I18n::p('Order By'); ?></th>
+                        <th><?php I18n::p('Order'); ?></th>
                         <th>&nbsp;</th>
                     </tr>
                     <tr>
-                        <td><input type="text" class="input-xlarge" name="order_by[]"  value="_id" placeholder="Enter Attribute"></td>
+                        <td><input type="text" class="input-xlarge" name="order_by[]"  value="_id" placeholder="<?php I18n::p('Enter Attribute'); ?>"></td>
                         <td><select style="width: auto;" name="orders[]"><option value="1">ASC</option><option value="-1">DESC</option></select></td>
                         <td>&nbsp;<a href="javascript:void(0)" onclick="PMDS.appendOrderBy();" class="icon-plus" title="Add" >&nbsp;</a></td>
                     </tr>

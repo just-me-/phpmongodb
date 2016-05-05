@@ -22,7 +22,7 @@ class IndexController extends Controller{
         //$this->debug($languages);
         if(array_key_exists($language,$languages)){
             $session=new Session();
-           $session->language=$language;
+            $session->language=$language;
         }else{
             $this->message->error = I18n::t('LAN_NOT_AVA');
         }

@@ -1,7 +1,7 @@
 <?php $autocomplete= isset(Config::$autocomplete) && Config::$autocomplete==TRUE ?'on':'off';?>
 <div class="dialog">
     <div class="block">
-        <p class="block-heading">Sign In</p>
+        <p class="block-heading"><?php I18n::p('Sign In'); ?></p>
         <div class="block-body">
             <form id="tab2" method="post" action="index.php">
                 <label><?php I18n::p('USERNAME'); ?></label>

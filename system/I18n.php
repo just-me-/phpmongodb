@@ -11,9 +11,17 @@ class I18n {
     protected static $language = NULL;
 
     protected static function init() {
+        // 2Do - via Startsession
+        $fileWithPath = getcwd() . '/config.php';
+        if (is_readable($fileWithPath)) {
+            require_once ($fileWithPath);
+        }
+        $default_language = Config::$default_language ? Config::$default_language : self::DEFAULT_LANGUAGE;
+        
+        
         if (!is_array(self::$language)) {
             $session=Application::getInstance('Session');
-            $language= isset($session->language)?$session->language:self::DEFAULT_LANGUAGE ;
+            $language= isset($session->language)?$session->language:$default_language ;
             require_once getcwd() . '/application/language/'.$language.'.php';
             self::$language = $language;
         }
