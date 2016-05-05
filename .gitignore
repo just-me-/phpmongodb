@@ -1,0 +1,12 @@
+# OSX
+.DS_Store
+
+# user config
+config.php
+
+# in case there are .htaccess or .htpasswd etc
+.ht*
+
+# komodo
+*.komodoproject
+
