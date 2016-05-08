@@ -97,7 +97,7 @@ class CHttp {
     public function redirect($url, $terminate = true, $statusCode = 302) {
         if (strpos($url, '/') === 0 && strpos($url, '//') !== 0)
             $url = $this->getHost() . $url;
-        header('Location: ' . $url, true, $statusCode);
+        echo("<script>location.href = '".$url."';</script>");
         if ($terminate)
             exit();
     }
